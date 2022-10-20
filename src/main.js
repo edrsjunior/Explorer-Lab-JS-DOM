@@ -69,7 +69,7 @@ const ccNumberPattern = {
   
 
 
-  dispatch: function (appended, dynamicMasked) {// CRIAR UMA FUNCAO dispatch que funciona semelherante a recursao ou seja ela chama ela mesma
+  dispatch: function (appended, dynamicMasked) {// CRIAR UMA FUNCAO dispatch que funciona semelherante a recursao ou seja ela chama ela mesma toda vez que digitar um number
     const number = (dynamicMasked.value + appended).replace(/\D/g, "") //Pega cada caractere e adiciona na dynamicMasked e caso nao for um digito substitui por nada
     const foundMask = dynamicMasked.compiledMasks.find(function (item) { //Procura uma mascara valida no array de mask ccNumberPattern e caso encontre atraves do match retorna
       return number.match(item.regex)
